@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тренажёр видения шахматной доски</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!--<h1>Какой цвет клетки шахматной доски?</h1>
+    <h2>Тренируй видение шахматной доски и становись чемпионом! 🏆</h2>-->
+
+        <!-- Mode selection -->
+        <div class="mode-controls">
+            <button class="mode-btn" id="btn-timed" data-mode="timed" data-time="60" data-questions="64">
+                1 мин (64 ?)
+            </button>
+            <button class="mode-btn" id="btn-free" data-mode="free">
+                Тренировка
+            </button>
+        </div>
+
+        <!-- Chess square notation -->
+        <div class="square-container">
+            <div id="square-display" class="square-display">e4</div>
+        </div>
+
+        <!-- White / Black buttons -->
+        <div class="buttons">
+            <button id="btn-white" class="answer-btn white">Белый</button>
+            <button id="btn-black" class="answer-btn black">Чёрный</button>
+        </div>
+
+        <!-- Single Start/Stop button -->
+        <div class="start-container">
+            <button id="btn-startstop" class="start-btn">Старт</button>
+        </div>
+
+        <!-- Progress bar (only for timed mode) -->
+        <div class="progress-container" id="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+            <p>Правильно: <span id="correct-count">0</span></p>
+            <p>Неправильно: <span id="wrong-count">0</span></p>
+            <p>Осталось времени: <span id="time-left">—</span> секунд</p>
+            <p>Осталось ?: <span id="questions-left">—</span></p>
+            <p>Всего ответов: <span id="total-answered">0</span></p>
+            <p>Точность: <span id="accuracy">0%</span></p>
+        </div>
+
+        <!-- Result -->
+        <div class="result" id="result"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
